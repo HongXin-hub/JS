@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 利用构造函数创建对象
+
+        // 我们需要创建四大天王的对象  相同的属性 :  名字 年龄 性别 相同的方法:唱歌
+        // 构造函数的语法格式
+        // function 构造函数名(){
+        //     this.属性 = 值
+        //     this.方法 = function(){}
+        // }
+        // new 构造函数名();
+        function Star(uname, age, sex){
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (sang) {
+                console.log(sang);
+            }
+        }
+
+        var ldh = new Star('刘德华', 18, '男');
+//        console.log(typeof ldh);
+        console.log(ldh.name);
+        console.log(ldh['sex']);
+        ldh.sing('冰雨');
+        var zxy = new Star('张学友', 19, '男');
+        console.log(zxy.name);
+        console.log(zxy.age);
+        zxy.sing('李香兰');
+
+        // 1。构造函数名字首字母要大写
+        // 2。我们构造函数不需要 return 就可以返回结果
+        // 3。我们调用构造函数 必须使用 new
+        // 4。我们只要new Star() 调用函数就能创建一个对象 ldh {}
+        // 5。我们的属性和方法前面必须添加 this
+
+
+        /*
+         *   解析器在调用函数每次都会向函数内部传递进一个隐含的参数
+         *   这个隐含的参数就是this
+         *   这个对象我们称为函数执行的 上下文对象
+         *   根据函数调用方式的不同，this会指向不同的对象
+         *      1。以函数的形式调用时，this永远都是window
+         *      2。以方法的形式调用时，this就是调用方法的对象
+         */
+
+        var name = '全局的name属性';
+
+        // 将方法在全局作用域中定义
+        function fun() {
+//            console.log('a=' + a + ', b=' + b);
+            console.log('Hello 大家好，我是 ' + this.name);
+        }
+
+        // 以函数的形式调用，this是window
+        fun();
+
+        var obj = {
+            name: '孙悟空',
+            sayName: fun
+        };
+        var obj2 = {
+            name: '猪八戒',
+            sayName: fun
+        };
+
+
+        // 以方法的形式调用，this是调用方法的对象
+        obj.sayName();
+        obj2.sayName();
+
+
+        function Person(uname, age, gender) {
+            this.name = uname;
+            this.age = age;
+            this.gender = gender;
+            // 向对象中添加一个方法
+            this.sayName = fun;
+        }
+
+        /*
+         * 创建一个 Person构造函数
+         *  在 Person构造函数中,为每一个对象都添加了一个 sayname方法,
+         *      目前我们的方法是在构造函数内部创建的,
+         *          也就是构造函数毎执行一次就会创建一个新的 sayname方法
+         *      也是所有实例的 sayname都是唯一的。
+         *      这样就导致了构造函数执行一次就会创建一个新的方法,
+         *      执行10000次就会创建10000个新的方法,而10000个方法都是一摸一样的
+         *      这是完全没有必要,完全可以使所有的对象共享同一个方法
+         *
+         *
+         *
+         * 将函数定义在全局作用域,污染了全局作用域的命名空间
+         *  而且定义在全局作用城中也很不安全
+         */
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

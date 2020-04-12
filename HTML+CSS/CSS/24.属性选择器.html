@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a[title]{                /* E[att] { sRules } 选择具有att属性的E元素。 */
+            color: red;
+        }
+
+        input[type="text"]{      /* E[att="val"] { sRules }  选择具有att属性且属性值等于val的E元素。 */
+            color: red;
+        }
+
+        div[class^="font"]{        /* E[att^="val"] { sRules }  选择具有att属性且属性值为以val开头的字符串的E元素。 */
+            color: red;
+        }
+        div[class$="footer"]{      /* E[att$="val"] { sRules }  选择具有att属性且属性值为以val结尾的字符串的E元素。 */
+            color: skyblue;
+        }
+        div[class*="tao"]{         /* E[att*="val"] { sRules }  选择具有att属性且属性值为包含val的字符串的E元素。 */
+            color: green;
+        }
+        div[class~="a"] {         /* E[att~="val"] { sRules }  选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素（包含只有一个值且该值等于val的情况）。*/
+            color: purple;
+        }
+        div[class|="c"] {         /* E[att|="val"] { sRules }  选择具有att属性，其值是以val开头并用连接符"-"分隔的字符串的E元素；如果值仅为val，也将被选择。
+这样理解会更简单：如果元素E拥有att属性，并且值为val，或者值是以val-开头的，那么E将会被选择。*/
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+
+<a href="#" title="我是百度">百度</a>
+<a href="#" title="我是新浪">新浪</a>
+<a href="#">搜狐</a>
+<a href="#">网易</a>
+<a href="#">优酷</a>
+
+<hr />
+<input type="text" value="文本框" />
+<input type="text" value="文本框" />
+<input type="text" value="文本框" />
+<input type="submit" />
+<input type="submit" />
+<input type="submit" />
+<input type="button" value="确认" />
+<input type="reset" />
+<input type="reset" />
+
+<hr />
+<div class="font12">属性选择器</div>
+<div class="font12">属性选择器</div>
+<div class="font24">属性选择器</div>
+<div class="font24">属性选择器</div>
+<div class="font30">属性选择器</div>
+<div class="24font">属性选择器</div>
+<div class="sub-footer">属性选择器</div>
+<div class="jd-footer">属性选择器</div>
+<div class="news-tao-nav">属性选择器</div>
+<div class="news-tao-header">属性选择器</div>
+<div class="tao-header">属性选择器</div>
+<div class="news-tao">属性选择器</div>
+<br />
+<div class="a">1</div>
+<div class="b">2</div>
+<div class="a b">3</div>
+<br />
+<div class="c">0</div>
+<div class="c-test">1</div>
+<div class="d-test">2</div>
+<div class="e-test">3</div>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>

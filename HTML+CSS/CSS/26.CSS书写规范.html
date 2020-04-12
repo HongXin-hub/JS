@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 空格规范：【强制】选择器与 { 之间必须包含空格。
+                        示例：div {}
+                   【强制】属性名与之后的：之间不允许包含空格，：与属性值之间必须包含空格。
+                        示例：font-size: 20px;
+
+           选择器规范：【强制】并集选择器，每个选择器声明必须独占一行。
+                    示例：div,
+                         p,
+                         span,
+                         input {
+
+                         }
+                     【建议】选择器的嵌套层级应不大于 3 级，位置考后的限定条件应尽可能精确。
+
+        */
+        div {
+            font-size: 20px;
+        }
+        div,
+        p,
+        span,
+        input {
+
+        }
+        .nav li a {
+
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+<div class="nav">
+    <ul>
+        <li>
+            <ul>
+                <li><a href="#"></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

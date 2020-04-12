@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // Date 日期对象 是一个构造函数 必须使用new 来创建调用我们的日期对象
+        var arr = new Array(); // 创建一个数组对象
+        var obj = new Object(); // 创建了一个对象实例
+        // 1。使用Date 如果没有提供参数 返回当前系统的当前时间
+        var date = new Date();
+        console.log(date);
+        // 2。参数常用的写法   数字型  2020, 10, 1     或者是   字符串型  '2020-10-1 8:8:8'
+        var date1 = new Date(2020, 10, 1);
+        console.log(date1);     // 返回的是 11月 不是 10月
+        var date2 = new Date('2020-10-1 8:8:8');
+        console.log(date2);
+
+        // 格式化日期年月日
+        var dateFormat = new Date();
+        console.log(dateFormat.getFullYear()); // 当前年份
+        console.log(dateFormat.getMonth() + 1); // 返回当前月份小一个月 0～11  记得月份 + 1
+        console.log(dateFormat.getDate());      // 返回的是几号
+        console.log(dateFormat.getDay());       // 周一返回的是 1 周六返回的是 6 但是周日返回的是 0
+
+        var year = dateFormat.getFullYear();
+        var month = dateFormat.getMonth() + 1;
+        var dates = dateFormat.getDate();
+        var day = dateFormat.getDay();
+        var dayArr = ['日', '一', '二', '三', '四', '五', '六'];
+        console.log('今天是：' + year + '年' + month + '月' + dates + '日' + getTimer() + ' 星期' + dayArr[day]);
+
+        function getTimer() {
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            return h + '时' + m + '分' + s + '秒';
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

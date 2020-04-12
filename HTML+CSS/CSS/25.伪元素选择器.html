@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        .dome               类选择器
+        :first-child        伪类选择器
+        ::first-letter      伪元素选择器
+        */
+        p::first-letter {           /* 设置对象内的第一个字符的样式。 */
+            color: blue;
+            font-size: 50px;
+        }
+        p::first-line {           /* 设置对象内的第一行的样式。 */
+            color: green;
+        }
+        p::selection {           /* 设置对象内的第一个字符的样式。 */
+            color: pink;
+        }
+        div::before {               /* 设置在对象前（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用，并且必须定义content属性 */
+            content: '"俺';
+            color: red;
+        }
+        div::after {               /* before 和 after 在盒子div 的内部前面插入或者内部后面插入 */
+            content: '18岁。" "俺也一样！"';
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>freestyle</h1>
+<p>英语词汇，一般指即兴的、随性的随意的发挥，例如HIPHOP说唱中的freestyle就是即兴说唱的意思。2017年6月，因吴亦凡在国产说唱综艺《中国有嘻哈》中屡次提起freestyle而火遍网络。
+    2017年12月18日，“你有freestyle吗？”入选国家语言资源监测与研究中心发布的2017年度十大网络用语”。 [1]</p>
+<div>今年</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+    如何获取页面元素
+    DOM在我们实际开发中主要用来操作元素，我们如何来获取页面中的元素呢?
+    获取页面中的元素可以使用以下几种方式
+    1。根据ID获取
+    2。根据标签名获取
+    3。通过HTML5新增的方法获取
+    4。特殊元素获取
+
+-->
+
+<div id="time">2020-3-24</div>
+
+<script>
+    // 1.因为我们文档页面从上往下加载，所以先得有标签 所以我们script写到标签的下面
+    // 2.getElementById  驼峰命名法
+    // 3.参数 id是大小写敏感的字符串
+    // 4.返回的是一个元素对象
+    var timer = document.getElementById("time");
+    console.log(timer);
+    console. log(typeof timer);
+    // 5.console.dir 打印我们返回的元素对象  更好的查看里面的属性和方法
+    console. dir(timer);
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

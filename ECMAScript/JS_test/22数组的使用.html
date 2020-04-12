@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1。数组（Array）：就是一组数据的集合，存储在单个变量下
+        // 2。利用 new 创建数组
+        //    var arr = new Array();
+        // 3。利用数组字面量创建数组
+        //    var arr1 = [1, 2, 'pink老师', true];
+        // 4。数组里面的元素要用逗号分隔
+        // 5。数组里面的数据，比如1，2  称为数组元素
+        // 6。获取数组元素
+        // console.log(arr1);
+
+        // 新增数组元素 修改length长度
+        var arr = ['red', 'blue', 'green'];
+        console.log(arr.length);
+        arr.length = 5;
+        console.log(arr);
+        console.log(arr[3]);
+        console.log(arr[4]);
+
+        // 新增数组元素 修改索引号 最佳数组元素
+        var arr2 = ['red', 'blue', 'green'];
+        arr2[3] = 'pink';
+        console.log(arr2);
+        arr2[4] = 'hotpink';
+        console.log(arr2);
+
+        arr2[0] = 'yellow'; // 这里是替换原来的数组元素
+        console.log(arr2);
+
+        arr2 = '有点意思'; // 不要直接给数组名赋值，否则里面的数据元素都没有了
+        console.log(arr2);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

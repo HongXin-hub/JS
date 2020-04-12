@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-width: 320px;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 200px;
+        }
+
+        header img {
+            width: 100%;
+            height: 100%;
+        }
+
+        nav {
+            padding: 5px;
+        }
+
+        .row {
+            height: 90px;
+            width: 100%;
+            background-color: pink;
+            border-radius: 8px;
+            display: flex; /* 给父盒子加 */
+            margin-bottom: 5px;
+        }
+
+        .row3 {
+            flex: 1;
+            border-left: 1px solid #fff;
+        }
+
+        .row3:first-child {
+            border: 0;
+        }
+
+        .hotel {
+            display: flex;                  /* 给父盒子加 */
+            flex-direction: column;         /* 垂直排列 */
+        }
+
+        .hotel a {
+            flex: 1;
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+            line-height: 45px;
+            text-decoration: none;
+        }
+        .hotel a:first-child {
+            border-bottom: 1px solid #fff;;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="../image/xiecheng.jpg" alt="">
+</header>
+<nav>
+    <div class="row">
+        <div class="row3">酒店</div>
+        <div class="row3 hotel">
+            <a href="">海外酒店</a>
+            <a href="">特价酒店</a>
+        </div>
+        <div class="row3 hotel">
+            <a href="">团购</a>
+            <a href="">民宿·客栈</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row3">酒店</div>
+        <div class="row3 hotel">
+            <a href="">海外酒店</a>
+            <a href="">特价酒店</a>
+        </div>
+        <div class="row3 hotel">
+            <a href="">团购</a>
+            <a href="">民宿·客栈</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row3">酒店</div>
+        <div class="row3 hotel">
+            <a href="">海外酒店</a>
+            <a href="">特价酒店</a>
+        </div>
+        <div class="row3 hotel">
+            <a href="">团购</a>
+            <a href="">民宿·客栈</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row3 hotel">
+            <a href="">团购</a>
+            <a href="">民宿·客栈</a>
+        </div>
+        <div class="row3 hotel">
+            <a href="">海外酒店</a>
+            <a href="">特价酒店</a>
+        </div>
+        <div class="row3 hotel">
+            <a href="">团购</a>
+            <a href="">民宿·客栈</a>
+        </div>
+    </div>
+</nav>
+</body>
+</html>

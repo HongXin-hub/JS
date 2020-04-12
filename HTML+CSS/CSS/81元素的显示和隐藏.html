@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        div:first-child {
+            /*display: none;      !* 隐藏元素，不是删除  元素一直存在于页面中 但是不占有位置 *!*/
+            /*display: block;     !* 显示元素 *!*/
+            visibility: hidden;     /* 隐藏元素 但占有位置 */
+            visibility: visible;     /* 显示元素 */
+        }
+        div:last-child {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+</body>
+</html>

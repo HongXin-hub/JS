@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    视频：
+    <embed src="https://www.w3school.com.cn/example/html5/mov_bbb.ogg" width="500" autoplay></embed>
+    <br />
+    <hr />
+    音频：
+    <audio src="https://www.w3school.com.cn/i/horse.ogg" autoplay="autoplay" controls muted loop></audio>
+    <br />
+    <hr />
+    属性	        值	            描述
+    src        	url	        要播放的音频的 URL。
+    autoplay	autoplay	如果出现该属性，则音频在就绪后马上播放。
+    controls	controls	如果出现该属性，则向用户显示控件，比如播放按钮。
+    loop	loop	        如果出现该属性，则每当音频结束时重新开始播放。（loop等于2 播放两次；等于-1或loop或不写值 无限循环）
+    muted	muted	        规定视频输出应该被静音。
+    preload	preload         如果出现该属性，则音频在页面加载时进行加载，并预备播放。
+                                如果使用 "autoplay"，则忽略该属性。
+    由于版权等原因，不同浏览器可支持播放的格式是不一样的（兼容性写法，三种格式都放上去）
+    目前 audio 支持三种音频格式：ogg、mp3、wav
+    通过source标签指定多格式音频文件
+    <audio controls>
+        <source src="https://www.w3school.com.cn/i/horse.ogg" />
+        <source src="https://www.w3school.com.cn/i/horse.mp3" />
+        <source src="https://www.w3school.com.cn/i/horse.wav" />
+        您的浏览器不支持音频播放
+    </audio>
+    <hr />
+
+
+
+    属性	           值	            描述
+    src	        url	        要播放的视频的 URL。
+    autoplay	autoplay	如果出现该属性，则视频在就绪后马上播放。
+    controls	controls	如果出现该属性，则向用户显示控件，比如播放按钮。
+    height	pixels	        设置视频播放器的高度。
+    loop	loop	        如果出现该属性，则当媒介文件完成播放后再次开始播放。
+    muted	muted	        规定视频的音频输出应该被静音。
+    poster	URL	        规定视频下载时显示的图像，或者在用户点击播放按钮前显示的图像。
+    preload	preload         如果出现该属性，则视频在页面加载时进行加载，并预备播放。
+                                如果使用 "autoplay"，则忽略该属性。
+    width	pixels	        设置视频播放器的宽度。
+
+    由于版权等原因，不同浏览器可支持播放的格式是不一样的（兼容性写法，三种格式都放上去）
+    目前 video 支持三种音频格式：ogg、mp4、webM
+
+    <video src="https://www.w3school.com.cn/example/html5/mov_bbb.ogg" autoplay controls muted width="500"></video>
+    <hr />
+    <video controls autoplay>
+        <source src="https://www.w3school.com.cn/example/html5/mov_bbb.ogg" />
+        <source src="https://www.w3school.com.cn/example/html5/mov_bbb.mp4" />
+        <source src="https://www.w3school.com.cn/example/html5/mov_bbb.webm" />
+        您的浏览器不支持视频播放
+    </video>
+</body>
+</html>

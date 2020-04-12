@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transition: all 0.5s;
+        }
+
+        div:hover {
+            transform: scale(0.5, 1.5); /* 水平缩放 x     垂直缩放 y */
+        }
+
+        section {
+            height: 180px;
+            width: 296px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 2px solid red;
+        }
+
+        section img {
+            transition: all 0.2s;       /* 因为图片缩放了，实际图片做动画。谁做动画，给谁做过渡 */
+        }
+
+        section:hover img {
+            transform: scale(1.1, 1.1);
+            transition: all 0.6s;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<section>
+    <img src="../image/redmi.jpg" height="180px" width="296px" alt="">
+</section>
+
+</body>
+</html>

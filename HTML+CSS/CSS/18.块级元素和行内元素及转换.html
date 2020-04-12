@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+
+        span {
+            background-color: pink;
+
+        }
+
+        input {
+            width: 200px;
+            height: 50px;
+        }
+        .inline {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            display: inline;                  /* 显示模式 块级元素转行内元素 */
+            /*
+             none：隐藏对象。与visibility属性的hidden值不同，其不为被隐藏的对象保留其物理空间
+             inline：指定对象为内联元素。
+             block：指定对象为块元素。
+             inline-block：指定对象为行内块元素。（CSS2）
+             */
+        }
+        .block {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            display: block;                  /* 显示模式 行内元素转块级元素 */
+        }
+        a {
+            width: 100px;
+            height: 120px;
+            background-color: skyblue;
+            display: inline-block;            /* 显示模式 行内元素转行内块元素 */
+        }
+    </style>
+</head>
+<body>
+<h3>块级元素</h3>
+块级元素特点：
+总是从新行开始。独占一行
+高度，行高、外边距以及内部边距都可以控制。
+宽度默认是100%。
+可以容纳内联元素和其他块级元素。
+h1 p ul li div
+<div>123</div>
+<p>456</p>
+<div>789</div>
+<hr/>
+<h3>行内元素</h3>
+行内元素特点：
+和相邻行内元素在一行上。
+高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。
+默认高度就是他本身内容的高度。
+行内元素只能容纳文本或其他行内元素。(a 特殊)
+a strong em
+
+注意：
+1、只有文字才能组成段落，因此 p 里面不能放块级元素，同理还有h1～h6 他们都是文字类块级标签，里面不能放其他的块级元素。
+2、链接里面不能再放链接。
+
+<br/>
+<span>123</span>
+<span>456456456</span>
+<span>789</span>
+
+
+<!--<a href=""><a href=""></a></a>-->
+<!--<p>-->
+<!--<div>abc</div>-->
+<!--</p>-->
+
+<hr/>
+<h3>行内块元素</h3>
+在行内元素中有几个特殊的标签------<img/>、<input/>、/td>，可以对他们设置宽高和对齐属性，有些资料可能会称他们为行内块元素。
+
+行内元素特点：
+和相邻行内元素(行内块)在一行上。
+默认宽度就是他本身内容的宽度。
+高度，行高、外边距以及内部边距都可以控制。
+
+<input type="text"/><input type="text"/><input type="text"/>
+
+
+<hr/>
+<h3>行内元素与块级元素转换</h3>
+<div class="inline">123</div>
+<div class="inline">456</div>
+<div class="inline">789</div>
+
+<span class="block">abc</span>
+<span class="block">def</span>
+<span class="block">ghi</span>
+
+<a href="#">123abc</a><a href="#">123abc</a>
+</body>
+</html>

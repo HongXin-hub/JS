@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 120px;
+            height: 20px;
+            border: 1px solid red;
+            white-space: nowrap;        /* 首先要添加强制一行 */
+            /*text-overflow: clip;       !* 不限时省略标记，只是简单的裁切 *!*/
+            text-overflow: ellipsis;    /* 当对象文本溢出时，显示省略标记 */
+            overflow: hidden;
+            /*
+             text-overflow 一定要首先强制一行显示，再与 overflow属性 搭配使用
+             */
+        }
+</style>
+</head>
+<body>
+<div>
+    我的名字是安迪。楚乔的男朋友我的名字是安迪。楚乔的男朋友我的名字是安迪。楚乔的男朋友我的名字是安迪。楚乔的男朋友我的名字是安迪。
+</div>
+</body>
+</html>

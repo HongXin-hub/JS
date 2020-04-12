@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: skyblue;
+        }
+        div{
+            width: 300px;
+            height: 400px;
+            background: red url("../image/111775.jpg") no-repeat;
+            /*background-size: 100px;*/     /* 如果提供两个，第一个用于定义背景图像宽度，第二个定义高度；
+                                               只提供一个，该值用于定义背景图像的宽度，高度将依据图像宽度定义进行等比缩放计算得到。*/
+            /*background-size: 50%;    !* 盒子宽度的50% *!*/
+
+            /*background-size: cover;     !* 将背景图像等比缩放到完全覆盖容器，背景图像有可能超出容器。 *!*/
+
+            background-size: contain;   /* 将背景图像等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内。 */
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

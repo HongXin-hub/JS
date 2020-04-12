@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .top {
+            height: 120px;
+            background-color: black;
+        }
+        .banner {
+            width: 80%;
+            height: 200px;
+            margin: 20px auto;
+            background-color: skyblue;
+            border-radius: 15px;
+        }
+        .main {
+            width: 80%;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        .main ul li {
+            width: 25%;
+            height: 300px;
+            float: left;
+        }
+        .main ul li:nth-child(even) {       /* even 偶数个           odd 奇数个 */
+            background-color: purple;
+        }
+        .footer {
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="top">top</div>
+<div class="banner">banner</div>
+<div class="main">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<div class="footer">footer</div>
+</body>
+</html>

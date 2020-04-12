@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a:link { /* 未访问的链接   注意： link、visited、hover、active 要按照顺序写   */
+            font-size: 18px;
+            color: gray;
+            font-weight: bolder;
+        }
+
+        a:visited { /* 已访问的链接 */
+            font-size: 18px;
+            color: orange;
+            font-weight: bolder;
+        }
+
+        a:hover { /* 鼠标移动到链接上 */
+            font-size: 18px;
+            color: red;
+            font-weight: bolder;
+        }
+
+        a:active { /* 鼠标点击链接时 */
+            font-size: 18px;
+            color: green;
+            font-weight: bolder;
+        }
+
+        ul li:first-child { /* 选择第一个孩子 */
+            color: pink;
+        }
+        ul li:last-child { /* 选择最后一个孩子 */
+            color: purple;
+        }
+        ul li:nth-child(3) { /* 选择第 n 个一个孩子 */
+            color: skyblue;
+        }
+
+        /*ol li:nth-child(odd) { !* 选择所有奇数 odd 孩子的标签  *!*/
+            /*color: pink;*/
+        /*}*/
+        /*ol li:nth-child(even) { !* 选择所有偶数 even 孩子的标签  *!*/
+            /*color: skyblue;*/
+        /*}*/
+        ol li:nth-child(3n+1) { /* 选择所有 3n+1 的标签    从第一个孩子开始数，n是0 1 2 3 ...    */
+            color: skyblue;
+        }
+
+        dl dd:nth-last-child(even){  /* 选择所有偶数 even 孩子的标签    从第最后个孩子开始数，n是倒数的    */
+            color: pink;
+        }
+
+
+    </style>
+</head>
+<body>
+链接伪类选择器
+<a href="#"> 秒杀 </a>
+<hr/>
+结构(位置)伪类选择器
+<ul>
+    <li>第一个孩子</li>
+    <li>第二个孩子</li>
+    <li>第三个孩子</li>
+    <li>第四个孩子</li>
+    <li>第五个孩子</li>
+    <li>第六个孩子</li>
+    <li>第七个孩子</li>
+</ul>
+<hr/>
+<ol>
+    <li>第一个孩子</li>
+    <li>第二个孩子</li>
+    <li>第三个孩子</li>
+    <li>第四个孩子</li>
+    <li>第五个孩子</li>
+    <li>第六个孩子</li>
+    <li>第七个孩子</li>
+</ol>
+<hr/>
+<dl>
+    <dt>北京</dt>
+    <dd>东城</dd>
+    <dd>西城</dd>
+    <dd>海淀</dd>
+    <dd>朝阳</dd>
+    <dd>石景山</dd>
+    <dd>丰台</dd>
+</dl>
+
+
+</body>
+</html>

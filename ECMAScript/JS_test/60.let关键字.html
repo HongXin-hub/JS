@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // ES2015 之后    引入块作用域
+        // let   声明关键字
+
+        //        {
+        //            var x = 10;
+        //            let y = 10;
+        //        }
+        //
+        //        console.log(x);
+        //        console.log(y);
+
+
+//        var x = 10;
+//        {
+//            var x = 1;
+//        }
+//        console.log(x);   //   此处 x 为 1
+
+
+//        var x = 10;
+//        // 此处 x 为 10
+//        {
+//            let x = 6;
+//            // 此处 x 为 6
+//        }
+//        console.log(x);
+//        // 此处 x 为 10
+
+
+//        var i = 7;
+//        for (var i = 0; i < 10; i++) {
+//            // 一些语句
+//        }
+        // 此处，i 为 10
+
+
+//        let i = 7;
+//        for (let i = 0; i < 10; i++) {      // 在循环中用 let 声明了变量 i   只有在循环内 i 才是可见的
+//            // 一些语句
+//        }
+        // 此处 i 为 7
+
+
+
+        // 1。允许在程序的任何位置使用 var 重新声明 JavaScript 变量
+        // 2。在相同的作用域，或在相同的块中，通过 let 重新声明一个 var 变量是不允许的
+        // 3。相同的作用域，或在相同的块中，通过 let 重新声明一个 let 变量是不允许的
+        // 4。在相同的作用域，或在相同的块中，通过 var 重新声明一个 let 变量是不允许的
+
+        // 通过 var 声明的变量会提升到顶端
+        // 通过 let 定义的变量不会被提升到顶端。
+
+        console.log(a);
+        console.log(b);
+
+        var a = 1;
+        let b = 1;
+
+    </script>
+</head>
+<body>
+<p id="demo"></p>
+<p id="demo2"></p>
+<script>
+    // 通过 var 关键词定义的全局变量属于 window 对象：
+    var carName = "Audi";
+    // 此处的代码能够使用 window.carName
+    document.getElementById("demo").innerHTML = "我可以显示 " + window.carName;
+
+    // 通过 let 关键词定义的全局变量不属于 window 对象：
+    let carName2 = "Audi";
+    // 此处的代码能够使用 window.carName
+    document.getElementById("demo2").innerHTML = "我不能显示 " + window.carName2;
+
+</script>
+</body>
+</html>

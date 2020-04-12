@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            perspective: 500px;
+
+            /*
+            指定观察者距离「z=0」平面的距离，不允许负值
+            视距越大，效果越不明显
+            视距越小，效果越明显
+            */
+        }
+        img {
+            margin: 100px;
+            transition: all 3s;
+            transform-origin: left;
+        }
+        img:hover {
+            transform: rotateY(80deg);
+        }
+    </style>
+</head>
+<body>
+<img src="../image/kangxi.jpg" width="500px" alt="">
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cengdei {
+            color: pink;
+            font-size: 30px;
+        }
+        .cengdei {
+            color: skyblue;
+        }
+
+        .jicheng {
+            color: green;
+            font-size: 20px;
+        }
+
+        body {               /* .king继承下来的    0, 0, 0, 0     */
+            color: purple;
+        }
+
+        div {               /* 标签选择器    0, 0, 0, 1      */
+            color: pink;
+        }
+        .king {               /* 类选择器    0, 0, 1, 0     */
+            color: blue;
+        }
+
+        :last-child {         /* 伪类选择器    0, 0, 1, 0    */
+
+        }
+        #wang {              /* id选择器    0, 1, 0, 0    */
+            color: red;
+        }
+                                /* 行内样式选择器    1, 0, 0, 0    */
+        .king {
+            color: orange!important;      /*  !important最重要的  优先级最高    */
+        }
+    </style>
+</head>
+<body>
+<h1>CSS三大特性</h1>
+1、层叠性
+2、继承性
+3、优先级
+<div class="cengdei">我是一行描述层叠的文本</div>
+层叠性：
+1.样式冲突，遵循就近原则。哪个样式距离结构近，就执行哪个样式。
+2.样式不冲突，不会层叠。
+
+<hr />
+<div class="jicheng">
+    <p>我是一行描述继承的文本</p>
+</div>
+继承性：
+1.书写CSS样式表时，子标签会继承父标签的某些样式，如文本颜色和字号。想要设置一个可继承的属性，只需将它应用于父元素即可。
+注意：恰当地使用继承可以简化代码，降低CSS样式的复杂性。（text-，font-，line- 这些元素开头的都可以继承，以及color属性）
+
+<hr />
+<div class="king" id="wang" style="color: skyblue">王者荣耀</div>
+优先级：
+1、继承或者*      0, 0, 0, 0
+2、元素或者标签    0, 0, 0, 1
+3、类或者伪类     0, 0, 1, 0
+4、id           0, 1, 0, 0
+5、行内样式       1, 0, 0, 0
+6、!important     无穷大
+权重是优先级的算法，层叠是优先级的表现
+
+</body>
+</html>

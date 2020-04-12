@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<hr width="500" color="red">
+<h1 color="red">天王盖地虎</h1>
+<h1><span color="red">天王盖地虎</span></h1>
+<h1><font color="red">天王盖地虎</font></h1>
+
+CSS 概述
+CSS 指层叠样式表 (Cascading Style Sheets)
+样式定义如何显示 HTML 元素
+样式通常存储在样式表中
+把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题
+外部样式表可以极大提高工作效率
+外部样式表通常存储在 CSS 文件中
+多个样式定义可层叠为一
+
+<hr />
+层叠次序
+当同一个 HTML 元素被不止一个样式定义时，会使用哪个样式呢？
+
+一般而言，所有的样式会根据下面的规则层叠于一个新的虚拟样式表中，其中数字 4 拥有最高的优先权。
+
+浏览器缺省设置
+外部样式表
+内部样式表（位于 head 标签内部）
+    内联样式（在 HTML 元素内部）
+    因此，内联样式（在 HTML 元素内部）拥有最高的优先权，这意味着它将优先于以下的样式声明：<head> 标签中的样式声明，外部样式表中的样式声明，或者浏览器中的样式声明（缺省值）。
+<hr />
+
+    每条声明由一个属性和一个值组成。
+    属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。
+</body>
+</html>

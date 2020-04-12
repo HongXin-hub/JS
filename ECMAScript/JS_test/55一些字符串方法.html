@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // 字符串操作方法
+        // 1。concat('字符串1','字符串2',...);
+        var str1 = 'andy';
+        console.log(str1.concat('jack', 'andy'));
+
+        // 2。substr('截取的起始位置', '截取几个字符');
+        var str2 = '改革春风吹满地';
+        console.log(str2.substr(2, 2));  // 第一个2是索引号的2   第二个2是取几个字符
+
+        // 3。替换字符 replace ('被替换的字符', '替换为的字符')    只会替换第一个字符
+        var str3 = 'andyandy';
+        console.log(str3.replace('a', 'b'));
+        // 有一个字符串 'oabcosdfowedosdf'   要求把里面所有的 'o' 替换成 '*'
+        var str31 = 'oabcosdfowedosdf';
+        while (str31.indexOf('o') !== -1) {
+            str31 = str31.replace('o', '*');
+        }
+        console.log(str31);
+
+        // 4。字符转换为数组 split ('分隔符')
+        var str4 = 'red, pink, blue';
+        console.log(str4.split(','));
+
+        // 5。toUpperCase()  方法返回一个将调用字符串转换为大写形式的值。（如果这个值不是字符串则会被变成字符串）
+        var sentence = 'The quick brown fox jumps over the lazy dog.';
+        console.log(sentence.toUpperCase());
+
+        // 6。toLowerCase()  会将调用该方法的字符串值转为小写形式，并返回。
+        console.log('ALPHABET'.toLowerCase());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

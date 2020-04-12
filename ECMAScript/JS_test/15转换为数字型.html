@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // 转换为数字型
+        //        parseInt(string)函数
+        //        parseFloat(String)函数
+        //        Number()强制转换函数
+        //        js隐式转换(- * /)
+
+
+
+//        var age = prompt('请输入您的年龄');
+
+        // 1.把字符串型转换为数字型，得到的是整数    parseInt(变量)
+        // console.log(parseInt(age));
+        console.log(parseInt('3.99'));    // 3 取整
+        console.log(parseInt('120px'));   // 120 会去掉px单位
+        console.log(parseInt('rem120px')); // NaN
+
+        // 2.把字符串型转换为数字型，得到的是小数 浮点数    parseFloat(变量)
+        console.log(parseFloat('3.99'));    // 3.99
+        console.log(parseFloat('120px'));   // 120 会去掉px单位
+
+        // 3.利用 Number(变量)
+        var str = '123';
+        console.log(Number(str));       // 123
+        console.log(Number('3.99'));    // 3.99
+
+        // 4.利用 - * /  算式运算   隐式转换
+        console.log('12' - 0);      // 12
+        console.log('123' - '120');
+        console.log('123' * 1);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

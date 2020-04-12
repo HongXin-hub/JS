@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            margin: 0 auto;     /* 盒子居中对齐 */
+            text-align: center;     /* 文字水平居中 */
+            vertical-align: middle;     /* 垂直居中 对于块级元素无效 */
+        }
+        img {
+            /*vertical-align: baseline;     !* 默认的基线对齐 *!*/
+            vertical-align: middle;     /* 手动改为中线对齐 */
+        }
+        textarea {
+            width: 300px;
+            height: 300px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div>这里是文字</div>
+<hr />
+<img src="../image/2.jpg" alt="">我是图片旁边的文字
+<hr />
+用户留言：<textarea></textarea>
+</body>
+</html>

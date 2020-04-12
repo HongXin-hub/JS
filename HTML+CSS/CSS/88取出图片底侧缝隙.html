@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        img {
+            /* 解决方法： */
+            /*display: block;     !* 转换为块级元素 *!*/
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+ie低版本浏览器会出现
+图片或表单等行内块元素，他的底线会与父级盒子的基线对齐，所以图片底侧就会有一个空白缝隙。
+<div>
+    <img src="../image/3.jpg" alt="">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    用户名：<input type="text" placeholder="请输入用户名"/> <br />   <!-- 占位符，当用户输入时，里边的文字消失 -->
+    用户名：<input type="text" autofocus="autofocus"/> <br />       <!-- 自动获得焦点 -->
+    上传头像：<input type="file" multiple="multiple"/> <br />       <!-- 多文件上传 -->
+
+    <h4> 自动记录完成 </h4>
+    1、autocomplete 首先要有提交按钮<br />
+    2、这个表单必须给他名字，要有name<br />
+    <form action="">
+        姓名：<input type="text" autocomplete="on" name="lala"/> <br />     <!-- 是否自动记录 -->
+        昵称：<input type="text" required="required"> <br />     <!-- 不能为空 必填 -->
+        alt+s 获得焦点：<input type="text" accesskey="s"> <br />     <!-- 规定激活元素的快捷键 -->
+        <input type="submit" />
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+        }
+        div:nth-child(2) {
+            background-color: purple;
+            position: relative;
+            left: 100px;
+            top: 110px;
+            /* 相对定位：原来的位置继续占有（相对定位不脱标），是以自己原来位置的左上角移动 */
+        }
+    </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+</body>
+</html>

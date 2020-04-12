@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // 1。concat() 方法用于合并两个或多个数组
+        var array1 = ['a', 'b', 'c'];
+        var array2 = ['d', 'e', 'f'];
+        var array3 = array1.concat(array2);
+        console.log(array3);
+
+        // 2。slice() 方法返回一个新的数组对象，截取数组   包括 begin，不包括end
+        var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+        console.log(animals.slice(2));
+        console.log(animals.slice(2, 4));
+        console.log(animals.slice(1, 5));
+
+        // 3。splice() 方法通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回
+        var months = ['Jan', 'March', 'April', 'June'];
+        months.splice(1, 0, 'Feb');
+        console.log(months);
+        months.splice(4, 1, 'May');
+        console.log(months);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

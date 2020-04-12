@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            height: 50px;
+            border: 1px solid red;
+            padding-left: 30px;
+            /* 如果一个盒子没有给定宽度/高度或者继承父亲的宽度/高度，则padding 不会影响盒子的大小。 */
+            padding-top: 50px;
+            width: 100%;
+        }
+        nav {
+            width: 300px;
+            height: 40px;
+            border: 1px solid red;
+        }
+        p {
+            height: 20px;
+            background: pink;
+            padding-left: 30px;
+            /* 因为p 没有指定宽度，默认和父亲一样宽，块级元素，此时padding 也不会影响盒子的大小。 */
+
+        }
+    </style>
+</head>
+<body>
+<div>奔跑吧，兄弟</div>
+<nav>
+    <p>摔跤吧，爸爸</p>
+</nav>
+</body>
+</html>

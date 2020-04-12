@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {            /* 权重： 0, 0, 0, 1   */
+            color: red;
+        }
+        ul li {            /* 权重： ul 0, 0, 0, 1    li 0, 0, 0, 1    叠加成  0, 0, 0, 2   */
+            color: green;
+        }
+        nav ul li {             /* 权重叠加成  0, 0, 0, 3   */
+            color: blue;
+        }
+        .nav ul li {            /*   0, 0, 1, 2    */
+
+        }
+        a:hover {            /*   0, 0, 1, 1    */
+
+        }
+        .nav a{            /*   0, 0, 1, 1    */
+
+        }
+        #nav p{            /*   0, 1, 0, 1    */
+
+        }
+
+        .daohanglan {        /*   0, 0, 1, 0  是 nav的，不是 li的  */
+            color: red;
+        }
+        li {                /*   0, 0, 0, 1    */
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+<nav class="nav" id="nav">
+    <ul>
+        <li>李白</li>
+        <li>杜甫</li>
+        <li>白居易</li>
+    </ul>
+</nav>
+
+<hr />
+<div class="daohanglan">
+    <ol>
+        <li>继承的权重为 0 </li>
+    </ol>
+</div>
+</body>
+</html>

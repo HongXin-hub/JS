@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /*transform: translate(100px);        !* 水平移动100px *!*/
+            /*transform: translate(50%);        !* 不是以父级宽度为准，而是以自己宽度为准 *!*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);     /* 这样就不用自己计算盒子宽度 */
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

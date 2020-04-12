@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 600px;
+            /*height: 200px;      !* 很多情况下，父级盒子不方便给高度， 考虑孩子高度会变 *!*/
+            background-color: pink;
+        }
+        .box2 {
+            width: 600px;
+            height: 240px;
+            background-color: purple;
+        }
+        .son1 {                 /* 如果son1 和 son2 是标准流，会撑开盒子 */
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            float: left;
+        }
+        .son2 {
+            width: 300px;
+            height: 100px;
+            background-color: hotpink;
+            float: left;
+        }
+        /* 子盒子浮动脱离标准流，浮动元素不占位置，父盒子高度就为0   此时下面的盒子就会跑上来  */
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="son1"></div>
+    <div class="son2"></div>
+</div>
+<div class="box2"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // 封装一个去重的函数 unique
+        function unique(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; ++i) {
+                if (newArr.indexOf(arr[i]) === -1){
+                    newArr.push(arr[i]);
+
+                }
+            }
+            return newArr;
+        }
+
+        // var demo = unique(['c', 'a', 'z', 'c', 'e', 'a', 'x', 'a', 'b']);
+        var demo = unique(['red', 'blue', 'red']);
+        console.log(demo);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

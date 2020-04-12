@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+</head>
+<body>
+
+
+<script>
+
+    //        数组总和
+    //    var numbers = [45, 4, 9, 16, 25];
+    //    var sum = numbers.reduce(myFunction);
+    //
+    //    document.getElementById("demo").innerHTML = "总和是：" + sum;
+    //
+    //    function myFunction(total, value, index, array) {
+    //        return total + value;
+    //    }
+
+    //      反转
+    //    function reverseString(str) {
+    //        // 请把你的代码写在这里
+    //
+    //        var array = str.split("");
+    //
+    //        var newArray = array.reverse();
+    //
+    //        str = newArray.join("");
+    //
+    //        return str;
+    //    }
+    //    reverseString("hello");
+
+
+    //     阶乘
+    //    function factorialize(num) {
+    //        // 请把你的代码写在这里
+    //        if (num == 0) {
+    //            return 1;
+    //        }
+    //        for (var i = num - 1; i > 0; i--){
+    //            num *= i;
+    //        }
+    //        return num;
+    //    }
+    //
+    //    factorialize(0);
+
+
+    //    回文
+    //    function palindrome(str) {
+    //        // Good luck!
+    //        var re = /[\W_]/g;
+    //        var newString = str.toLowerCase().replace(re, "");
+    //        var len = newString.length;
+    //        for(var i = 0; i < len / 2; ++i){
+    //            if (newString[i] !== newString[len - 1 - i]){
+    //                return false;
+    //            }
+    //        }
+    //        return true;
+    //    }
+    //
+    //    console.log(palindrome("m a,,,,,da&(*&!!:'m"));
+
+
+    //     最长单词
+    //    function findLongestWord(str) {
+    //        // 请把你的代码写在这里
+    //
+    //        var length = 0;
+    //        var temp = 0;
+    //
+    //        for (var i = 0; i < str.length; ++i){
+    //
+    //            var indicator = 0;
+    //            for(var j = i; j < str.length; ++j){
+    //
+    //
+    //                if(str[j] === " "){
+    //                    temp = indicator;
+    //                    break;
+    //                }
+    //                if(j === str.length - 1){
+    //                    temp = ++indicator;
+    //                    break;
+    //                }
+    //                ++indicator;
+    //            }
+    //            if(length < temp){
+    //                length = temp;
+    //            }
+    //        }
+    //        return length;
+    //    }
+    //
+    //    console.log(findLongestWord("The quick brown fox jumped over the lazy What if we try a super-long word such as otorhinolaryngology"));
+
+
+    //      句中单词首字母大写
+    //    function titleCase(str) {
+    // 请把你的代码写在这里
+
+    //        var words = str.split(' ');
+    //        var b = "";
+    //        var a = "";
+    //
+    //        for(var i = 0; i < words.length; i++){
+    //
+    //            var temp = words[i].split('');
+    //
+    //            for(var j = 0; j < temp.length; j++){
+    //
+    //
+    //                if (j !== 0){
+    //                    temp[j] = temp[j].toLowerCase();
+    //                    continue;
+    //                }
+    //
+    //                temp[j] = temp[j].toUpperCase();
+    //
+    //            }
+    //            b = temp.join("");
+    //
+    //            a = a + " " + b;
+    //        }
+    //        console.log(a.class);
+    //        return a;
+    //
+    //
+    //        var newStr = str.toLowerCase().split(" ");
+    //        for(var i=0;i<newStr.length;i++){
+    //            newStr[i] = newStr[i].charAt(0).toUpperCase() + newStr[i].slice(1);
+    //        }
+    //        return newStr.join(" ");
+    //
+    //    }
+    //
+    //    console.log(titleCase("sHoRt AnD sToUt"));
+
+
+    //    找出多个数组中的最大数
+    //    function largestOfFour(arr) {
+    //        // 请把你的代码写在这里
+    //
+    //        var result = [];
+    //
+    //        for (var i = 0; i < arr.length; ++i){
+    //
+    //            arr[i].sort(function(a, b){
+    //                return b - a;
+    //            });
+    //
+    //            result.push(arr[i][0]);
+    //
+    //        }
+    //
+    //        return result;
+    //    }
+    //
+    //    console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
+
+    //    检查字符串结尾
+    //    function confirmEnding(str, target) {
+    //        // 请把你的代码写在这里
+    //
+    //        for (var i = str.length - 1, j = target.length - 1; i > -1, j > -1; --i, --j){
+    //
+    //            if(target[j] != str[i]){
+    //
+    //                return false;
+    //            }
+    //        }
+    //        return true;
+    //    }
+    //
+    //    confirmEnding("Bastian", "tian");
+
+
+    //    重复输出字符串
+    //    function repeat(str, num) {
+    //        // 请把你的代码写在这里
+    //
+    //        var newStr = [];
+    //
+    //        for(var i = num; i > 0; --i){
+    //            newStr.push(str);
+    //        }
+    //        newStr = newStr.join("");
+    //        return newStr;
+    //    }
+    //
+    //    console.log(repeat("*", 3));
+
+
+    //    截断字符串
+    //    function truncate(str, num) {
+    //        // 请把你的代码写在这里
+    //
+    //        if (str.length > num && num > 3) {
+    //
+    //            return str.slice(0, num - 3) + "...";
+    //        }
+    //        else if (str.length <= num) {
+    //
+    //            return str;
+    //        }
+    //        else if (num <= 3) {
+    //
+    //            return str.slice(0, num) + "...";
+    //        }
+    //
+    //    }
+    //
+    //    truncate("A-tisket a-tasket A green and yellow basket", 11);
+
+
+
+    //    猴子吃香蕉, 分割数组
+//    function chunk(arr, size) {
+//        // 请把你的代码写在这里
+//
+//        var newArr = [[]];
+//        var a = 0;
+//        for (var i = 0; i < arr.length; i++) {
+//
+//            newArr[a].push(arr[i]);
+//
+//            if (newArr[a].length >= size) {
+//                ++a;
+//
+//                if (i === arr.length - 1) {
+//                    break;
+//                }
+//                newArr.push([]);
+//            }
+//        }
+//        return newArr;
+//    }
+//    console.log(chunk(["a", "b", "c", "d", "e"], 1));
+
+
+
+//    比较字符串
+//    function mutation(arr) {
+//        // 请把你的代码写在这里
+//
+//        var newArr = [arr[0].toLowerCase(), arr[1].toLowerCase()];
+//
+//        for (var i = 0; i < newArr[1].length; ++i){
+//            if(newArr[0].indexOf(newArr[1].charAt(i)) == -1){
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//
+//    console.log(mutation(["hello", "HeY"]));
+
+
+
+//    过滤数组假值
+//    function bouncer(arr) {
+//        // 请把你的代码写在这里
+//        var newArr = [];
+//        for (var i = 0; i < arr.length; ++i){
+//            if (Boolean(arr[i]) == true){
+//
+//                newArr.push(arr[i]);
+//
+//            }
+//        }
+//        return newArr;
+//    }
+//
+//    console.log(bouncer([7, "ate", "", false, 9]));
+
+
+//    摧毁数组             不太懂
+//    function destroyer(arr) {
+//        // 请把你的代码写在这里
+//
+//        var args = [];
+//        for(var i = 1; i < arguments.length; i++){
+//            args.push(arguments[i]);
+//        }
+//
+//        var temp = arr.filter(function(val){
+//            console.log("args.indexOf(val) = " + args.indexOf(val) + "      val = " + val);
+//
+//            return args.indexOf(val) === -1;
+//        });
+//
+//        return temp;
+//    }
+//
+//    console.log(destroyer([1, 2, 3, 1, 2, 3, 3, 7, 6, 5, 10], 3, 5, 6));
+
+
+
+
+
+//    数组排序并找出元素索引
+//    function where(arr, num) {
+//        // 请把你的代码写在这里
+//
+//        arr.sort(function(a, b){
+//            return a - b;
+//        });
+//
+//        for (var i = 0; i < arr.length; i++){
+//
+//            if(num <= arr[i]){
+//                return i;
+//            }
+//        }
+//        return arr.length;
+//    }
+//
+//    console.log(where([10, 20, 30, 40, 50], 30));
+
+
+
+//    凯撒密码
+//    function rot13(str) { // LBH QVQ VG!
+//                          // 请把你的代码写在这里
+//        var newStr = "";
+//        var index = 0;
+//        var temp = 0;
+//
+//        for (var i = 0; i < str.length; i++){
+//
+//            index = str.charCodeAt(i);
+//
+//            if(index >= 65 && index <= 90){
+//
+//                temp = index+13>90 ? index+13-26 : index+13;
+//
+//                newStr += String.fromCharCode(temp);
+//
+//            }
+//            else{
+//                newStr += str[i];
+//            }
+//        }
+//
+//        return newStr;
+//    }
+//
+//    rot13("SERR PBQR PNZC");  // 你可以修改这一行来测试你的代码
+
+
+//---------------------------------------------------------------------------------------------------
+    //对一个范围内的所有数字求和
+
+//    function sumAll(arr) {
+//
+//
+//        var max = Math.max(arr[0],arr[1]); // 取得最大值
+//        var min = Math.min(arr[0],arr[1]); // 取得最小值
+//        var sum = [];    //存储取到的所有数
+//        for (var i = 0;i <= max - min; i++){
+//            sum[i] = min + i;
+//        }
+//
+//        return sum.reduce(function(accumulator, currentValue, currentIndex, array){
+//            return accumulator + currentValue;
+//        });
+//
+//    }
+//
+//    console.log(sumAll([1, 4]));
+
+
+//     我们会传递给你一个包含两个数字的数组。返回这两个数字和它们之间所有数字的和。
+//    function diff(arr1, arr2) {
+//        var newArr = [];
+//        // Same, same; but different.
+//
+//        var ar1 = arr1.filter(function (t) {
+//            return arr2.indexOf(t) === -1;
+//        });
+//
+//        var ar2 = arr2.filter(function (t) {
+//            return arr1.indexOf(t) === -1;
+//        });
+//
+//        newArr = ar1.concat(ar2);
+//
+//        return newArr;
+//    }
+//
+//    console.log(diff([1, 2, 3, 5, 7, 8], [1, 2, 3, 4, 5, 9]));
+
+
+
+//    将给定的数字转换成罗马数字。
+//    function convert(num) {
+//
+//        var numArr = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000];
+//        var romeArr = ["I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"];
+//        var romeStr = "";
+//
+//        var index = numArr.length;
+//        while (index >= 0){
+//
+//            if (num >= numArr[index]){
+//                num -= numArr[index];
+//                romeStr += romeArr[index];
+//
+//            }else {
+//                --index;
+//            }
+//        }
+//
+//        return romeStr;
+//    }
+//
+//    console.log(convert(1023));
+
+
+
+
+
+//    遍历一个对象数组（第一个参数）并返回一个包含相匹配的属性-值对（第二个参数）的所有对象的数组
+
+//    function where(collection, source) {
+//        var arr = [];
+//
+//        // What's in a name?
+//        var keys = Object.keys(source);
+//
+//        console.log(keys);
+//
+//        arr = collection.filter(function(item){
+//            for(var i = 0; i < keys.length; ++i){
+//                if(!item.hasOwnProperty(keys[i]) || item[keys[i]] !== source[keys[i]])
+//                    return false;
+//            }
+//            return true;
+//        });
+//
+//        return arr;
+//    }
+//
+//    where([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 });
+
+
+
+
+//    var a = 0;
+//    for (var i = 0; i < 99; ++i) {
+//        a = a ++;
+//    }
+//    console.log(a);
+
+
+
+
+//    使用给定的参数对句子执行一次查找和替换，然后返回新句子。
+//    function myReplace(str, before, after) {
+//
+//        if(before.charAt(0) < "a"){
+//
+//            var a = after.charAt(0);
+//            after = after.replace(a, a.toUpperCase());
+//        }
+//
+//        str = str.replace(before, after);
+//
+//        return str;
+//    }
+//
+//    myReplace("He is Sleeping on the couch", "Sleeping", "sitting")
+
+
+//    function translate(str) {
+//
+//        var vowel = "aeiou";
+//        var i = 0;
+//        for ( ; i < str.length; ++i){
+//            console.log(i);
+//            if(vowel.indexOf(str[i]) !== -1){
+//
+//                break;
+//            }
+//
+//        }
+//
+//        if(i === 0){
+//
+//            return str + "way";
+//        }
+//
+//        return str.substr(i, str.length - i) + str.substr(0, i) + "ay";
+//
+//    }
+//
+//    console.log(translate("consonant"));
+
+
+
+//    DNA 链缺少配对的碱基
+//    function pair(str) {
+//
+//        var obj = {'A':'T','T':'A','G':'C','C':'G'};
+//        var arr = [];
+//
+//        for(var i in str){
+//            arr.push([str[i],obj[str[i]]]);
+//        }
+//        return arr;
+//
+//    }
+//
+//    console.log(pair("GCG"));
+
+
+
+
+//     从传递进来的字母序列中找到缺失的字母并返回它。
+//    function fearNotLetter(str) {
+//
+//        var result = "";
+//        var index = str.charCodeAt(0);
+//
+//        for(var i = 1; i < str.length; ++i){
+//
+//            if(str.charCodeAt(i) != ++index){
+//
+//                return String.fromCharCode(index);
+//            }
+//        }
+//        return undefined;
+//    }
+//
+//    console.log(fearNotLetter("abce"));
+
+
+
+//    检查一个值是否是基本布尔类型，并返回 true 或 false。
+//    function boo(bool) {
+//        // What is the new fad diet for ghost developers? The Boolean.
+//        return typeof bool==='boolean';
+//    }
+//
+//    boo(null);
+
+
+
+//    function unite(arr1, arr2, arr3) {
+//
+//        var args = Array.from(arguments);
+//
+//        var arr = args.reduce((prev, cur) => prev.concat(cur));
+//
+//        var set = new Set(arr);
+//
+//        arr = Array.from(set);
+//
+//        return arr;
+//    }
+//
+//    console.log(unite([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+//
+//    console.log([0, 1, 2, 3, 4].reduce((prev, curr) => prev - curr ));
+
+
+
+
+    //正解2
+    function convertHTML(str) {
+        var regObj = {
+            "&":"&amp;",
+            "<":"&lt;",
+            ">":"&gt;",
+            '"':"&quot;",
+            "'":"&apos;"
+        };
+        var reg = /[&<>"']/g;
+
+        var arr = str.match(reg);
+        if(arr){
+            for(var i in arr){
+                str = str.replace(arr[i],regObj[arr[i]]);
+            }
+        }
+        return str;
+    }
+
+    // test here
+    console.log(convertHTML("Dolce & Gabbana"));
+
+
+
+</script>
+
+</body>
+</html>

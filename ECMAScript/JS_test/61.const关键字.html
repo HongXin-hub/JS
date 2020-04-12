@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 通过 const 定义的变量与 let 变量类似，但不能重新赋值
+//        const PI = 3.141592653589793;
+//        PI = 3.14;      // 会出错
+//        PI = PI + 10;
+
+
+        var x = 10;
+        // 此处，x 为 10
+        {
+            const x = 6;
+            // 此处，x 为 6
+        }
+        console.log(x);   // 此处，x 为 10
+
+        // JavaScript const 变量必须在声明时赋值
+
+        // 我们不能更改常量原始值，但我们可以更改常量对象的属性。
+
+
+        const car = {type:"porsche", model:"911", color:"Black"};
+        car.color = "White";    // 可以更改属性
+        car.owner = "Bill";     // 可以添加属性
+
+//        car = {type:"Volvo", model:"XC60", color:"White"};    // ERROR
+
+
+        const cars = ["Audi", "BMW", "porsche"];
+
+        cars[0] = "Honda";  // 可以更改元素
+        cars.push("Volvo"); // 可以添加元素
+
+
+        // 在同一作用域或块中，不允许将已有的 var 或 let 变量重新声明或重新赋值给 const
+        // 在同一作用域或块中，为已有的 const 变量重新声明声明或赋值是不允许的
+        // 在另外的作用域或块中重新声明 const 是允许的
+
+        // 通过 var 定义的变量会被提升到顶端
+        // 通过 const 定义的变量不会被提升到顶端
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

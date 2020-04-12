@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        var obj = {
+            name: 'pink老师',
+            age: 18,
+            sex: '男',
+            fn: function(){}
+        };
+
+//        console.log(obj.name);
+//        console.log(obj.age);
+//        console.log(obj['sex']);
+
+        for(k in obj){          // 一般用 k 或 key
+            console.log(k);     // k 变量输出 得到的是 属性名
+            console.log(obj[k]);    // 得到是的 属性值
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

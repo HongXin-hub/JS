@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>三行三列的表格</h2>
+<table border="1" cellspacing="0" cellpadding="0" width="900" height="300" align="center">
+    <caption><h2>表格标题</h2></caption>    <!-- 定义表格标题。粗体居中 -->
+    <tr>                <!-- 定义表格的行。 -->
+        <th>姓名</th>    <!-- 定义表格的表头。粗体居中 -->
+        <th>性别</th>
+        <th>年龄</th>
+    </tr>
+    <tr>
+        <td>王钢蛋</td>
+        <td>男</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>李铁锤</td>
+        <td>女</td>
+        <td rowspan="2">38</td>     <!-- 跨行合并 -->
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>男</td>
+                                <!-- 删除这个单元格 -->
+    </tr>
+    <tr>
+        <td>李铁锤</td>
+        <td>男</td>
+        <td>26</td>
+    </tr>
+    <tr>
+        <td>李铁锤</td>
+        <td colspan="2">男</td>      <!-- 跨列合并 -->
+                                <!-- 删除这个单元格 -->
+    </tr>
+</table>
+
+border              设置表格的边框（像素值，默认border="0"无边框）<br />
+cellspacing         设置单元格与单元格边框之间的间距（像素值，默认2px）<br />
+cellpadding         设置单元格内容与单元格边框之间的间距（像素值，默认1px）<br />
+width               设置表格的宽度（像素值，）<br />
+height              设置表格的高度（像素值，）<br />
+align               设置表格在网页中的水平对齐方式（left、center、right）<br />
+rowspan : 跨行合并<br />
+colspan : 跨列合并<br />
+需要删除被合并的单元格
+
+</body>
+</html>

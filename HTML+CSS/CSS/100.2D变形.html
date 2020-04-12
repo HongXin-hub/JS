@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            transition: all 0.5s;
+            /* 变形：移动（x，y）; */
+        }
+        div:active {        /* 鼠标点击没有松开鼠标时的效果 */
+            /*transform: translate(50px, 200px);      !* 鼠标点击后，再移动位置 *!*/
+            /*transform: translate(50px ,0);         !* 只移动x轴 *!*/
+            transform: translateX(50px);        /* 只移动x轴，另一种写法      y轴写 translateY */
+
+        }
+        div:hover {
+
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
